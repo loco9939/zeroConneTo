@@ -1,0 +1,38 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+.header, .section, .footer-inner {
+  margin: 0 auto;
+}
+.header {
+  width: 800px;
+  background: green;
+}
+.section-heading {
+  visibility: hidden;
+}
+.section {
+  /* padding: 0 10px; */
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-wrap: nowrap; */
+  justify-content: space-around;
+  /* align-items: stretch; */
+  width: 800px;
+  background: yellow;
+}
+.article {
+  width: 400px;
+  background: blue;
+}
+.aside {
+  width: 200px;
+  background: gray;
+}
+.footer {
+  background: purple;
+}
+.footer-inner {
+  width: 800px;
+  background: tomato;
+}
