@@ -333,34 +333,39 @@ body {
 .sign li:last-child {
   float: right;
 }
-.site {
-  margin: 20px 0;
+/* 유효성 검사 */
+.validation-list {
+  margin-top: 25px;
 }
-.site ul li {
-  border: 1px solid black;
-  margin: 10px 0;
-  border-radius: 20px;
-  padding: 5px;
-  text-align: center;
-  background: #eee linear-gradient(#e2e2e2,#fff);
-  position: relative;
+.validation-list li {
+  margin-top: 10px;
 }
-.w3c {
-  padding:10px 37px;
+.validation-list a {
+  background: url("./images/validation_icon.png") no-repeat 20px 50% /16px 16px,
+    #aaa linear-gradient(to bottom, #ccc, #aaa);
+  display: block;
+  padding: 10px;
+  border-radius: 50px;
+  padding-left: 45px;
 }
-.w3c img {
-  position: absolute;
-  left: 30px;
+.validation-list a:hover,
+.validation-list a:focus {
+  color: #f00;
+  background-size: 14px 14px, 100%;
 }
-.css img {
-  position: absolute;
-  left: 30px;
+
+.description {
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: #aaa linear-gradient(to bottom, #ccc, #aaa);
 }
-.css {
-  padding:10px 37px;
+.description img {
+  display: inline;
 }
-.tooltiptext {
-  
+.description p {
+  display: inline-block;
+  width: 150px;
 }
 
 /* 슬로건 */
