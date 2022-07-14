@@ -146,16 +146,25 @@
   <main class="main">
     <div class="group group1">
       <section class="login">
-        <h2>로그인</h2>
-        <form action="/">
-          <div class="input">
-            <p>아이디<input type="email" placeholder="이메일 주소" /></p>
-            비밀번호<input type="password" placeholder="8자리 이상" />
-            <button class="btn-login">로그인</button>
-          </div>
-          <a href="" class="sign-in">회원가입</a>
-          <a href="" class="find-id">아이디/비밀번호 찾기</a>
+        <h2 class="login-title">로그인</h2>
+        <form method="POST" action="https://formspree.io/seulbinim@gmail.com" class="login-form">
+          <fieldset>
+            <legend>회원 로그인 폼</legend>
+            <div class="user-email">
+              <label for="userEmail">아이디</label>
+              <input type="email" id="userEmail" required="required" placeholder="guest@zerobase.com" />
+            </div>
+            <div class="user-pwd">
+              <label for="userPwd">비밀번호</label>
+              <input type="password" id="userPwd" required="required" placeholder="비밀번호를 입력해주세요." />
+            </div>
+            <button type="button" class="login-button">로그인</button>
+          </fieldset>
         </form>
+        <ul class="sign">
+          <li><a href="/" class="icon-right-open">회원가입</a></li>
+          <li><a href="/" class="icon-right-open">아이디/비밀번호 찾기</a></li>
+        </ul>
       </section>
     </div>
     <div class="group group2">그룹2</div>
