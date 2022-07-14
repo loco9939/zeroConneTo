@@ -64,9 +64,8 @@ body {
 /* 로고 */
 .logo {
   position: absolute;
-  top: 45px;
+  top: 52px;
   left: 65px;
-  /* z-index: 10; */
 }
 
 /* 멤버링크 */
@@ -90,14 +89,13 @@ body {
   padding-bottom: 30px;
 }
 .menu {
-  background: #d16527
-    linear-gradient(
-      to bottom,
-      #edad2d 0%,
-      #d16527 45%,
-      #d16527 60%,
-      #edad2d 100%
-    );
+  background: linear-gradient(
+    to bottom,
+    #edad2d 0%,
+    #d16527 45%,
+    #d16527 60%,
+    #edad2d 100%
+  );
   padding-left: 232px;
   display: flow-root;
   height: 47px;
@@ -156,7 +154,7 @@ body {
   margin-right: 0.2em;
   content: "\f192";
 }
-/* ???? */
+
 .sub-menu a:hover::before,
 .sub-menu a:focus::before {
   content: "\e800";
@@ -222,7 +220,7 @@ body {
   /* animation-direction: alternate; 한번은 순방향 한번은 역방향 */
   animation: fadeEffect 2000ms infinite alternate; /* 단축 표현 */
 }
-.visual::before {
+/* .visual::before {
   background-image: url(./images/ani_flower_01.png),
     url(./images/ani_flower_02.png);
   background-position: 0 -10px, 670px 0;
@@ -233,7 +231,7 @@ body {
     url(./images/ani_flower_04.png);
   background-position: 300px 10px, 800px 10px;
   animation-delay: 1000ms;
-}
+} */
 
 /* 메인 컨텐츠 */
 .main {
