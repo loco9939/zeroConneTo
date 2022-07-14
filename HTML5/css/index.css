@@ -333,6 +333,35 @@ body {
 .sign li:last-child {
   float: right;
 }
+.site {
+  margin: 20px 0;
+}
+.site ul li {
+  border: 1px solid black;
+  margin: 10px 0;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  background: #eee linear-gradient(#e2e2e2,#fff);
+  position: relative;
+}
+.w3c {
+  padding:10px 37px;
+}
+.w3c img {
+  position: absolute;
+  left: 30px;
+}
+.css img {
+  position: absolute;
+  left: 30px;
+}
+.css {
+  padding:10px 37px;
+}
+.tooltiptext {
+  
+}
 
 /* 슬로건 */
 .slogan {
