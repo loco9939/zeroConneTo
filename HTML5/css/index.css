@@ -5,7 +5,8 @@
 @import url("./fontello.css");
 
 /* 숨김 컨텐츠 */
-.sr-only, legend {
+.sr-only,
+legend {
   background: red;
   position: absolute;
   width: 1px;
@@ -262,58 +263,75 @@ body {
 }
 /* 로그인 */
 .login {
-  background: orangered;
+  background: #e8852e radial-gradient(circle at right top, #e8852e, #ed552f);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 #aaa;
 }
-.login h2 {
+.login-title {
   color: #ff0;
-  font-weight: 700;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-indent: 10px;
 }
-.login ul,form {
-  background:#fff;
-}
-.login form {
+.login-form {
+  margin-top: 10px;
+  background: #fff;
+  padding: 10px 10px 0 10px;
   border-radius: 5px 5px 0 0;
-  padding: 10px;
+}
+.login-form fieldset {
   position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
 }
-.login ul {
-  border-radius: 0 0 5px 5px;
+.user-email {
+  margin-bottom: 5px;
 }
-fieldset {
-  border-bottom: 1px solid black;
+.login-form label {
+  width: 4em;
+  display: inline-block;
 }
-.user-email label {
-  padding-right: 12px;
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 2px 2px 2px 0.5rem;
 }
 .login-button {
   position: absolute;
-  min-height: 50px;
-  top:10px;
-  right:10px;
-  background: orange;
-  border: none;
-  border-radius: 5px;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 53px;
+  padding: 0;
+  font-size: 1.3rem;
+  background: #ed552f;
   color: #fff;
-}
-.user-email,.user-pwd {
-  display: inline-block;
-  margin-bottom: 5px;
-}
-.user-email input {
-  width: 100px;
-}
-.user-pwd input {
-  width: 100px;
+  border: 0;
+  border-radius: 4px;
 }
 .sign {
-  text-align: center;
-  padding-bottom: 10px;
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 0 0 5px 5px;
+  display: flow-root;
 }
-.sign li {
-  display: inline-block;
+.sign .icon-right-open::before {
+  color: #ed552f;
+}
+.sign a {
+  display: block;
+  padding: 6px 0;
+  font-size: 1.3rem;
+  /* letter-spacing: -1px; */
+}
+.sign li:first-child {
+  float: left;
+}
+.sign li:last-child {
+  float: right;
 }
 
 /* 슬로건 */
