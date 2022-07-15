@@ -448,22 +448,6 @@ body {
   border-radius: 4px;
 }
 
-/* 공지사항 */
-.board {
-  background: #aaa;
-}
-.board-title-list {
-  background: green;
-}
-.board-title {
-  float: left;
-  background: yellow;
-}
-.see-more {
-  /* display: inline-block; */
-  float: right;
-}
-
 /* 슬로건 */
 .slogan {
   background: lime;
