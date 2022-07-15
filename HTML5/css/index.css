@@ -423,7 +423,6 @@ body {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  
 }
 .search-form label,
 .search-button {
@@ -438,6 +437,7 @@ body {
   width: 100%;
   margin: 0 10px;
   -webkit-appearance: none;
+  background: #fff;
 }
 .search-button {
   background: #000;
