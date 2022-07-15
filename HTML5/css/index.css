@@ -453,9 +453,9 @@ body {
   background: yellow;
   position: relative;
   margin-top: 20px;
-  height: 214px;
+  display: flow-root;
 }
-.board-tab {
+.notice-tab {
   float: left;
   border: 1px solid #aaa;
   border-radius: 5px 5px 0 0;
@@ -463,23 +463,36 @@ body {
   padding: 5px 15px;
   color: #666;
 }
+/* .board-tab {
+  float: left;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  background: #ccc;
+  padding: 5px 15px;
+  color: #666;
+} */
 .board-section.is-select .board-tab {
   background: #fff;
   color: #ed552f;
   border-color: currentColor currentColor #fff currentColor;
 }
 .board-panel {
-  position: absolute;
-  background: lime;
+  /* position: absolute; */
+  /* background: lime; */
   display: none;
-  top: 45px;
+  /* top: 45px; */
   width: 100%;
+  float: left;
 }
 .board-section.is-select .board-panel {
-  display: flex;
-  flex-flow: wrap;
-  width: 100%;
-  gap: 10px;
+  /* display: flex;
+  flex-flow: wrap;*/
+  width: 100%; 
+  /* gap: 10px; */
+  /* float: left; */
+}
+.is-select {
+  display: block;
 }
 .board-panel li {
   display: flex;
@@ -507,6 +520,14 @@ body {
 
 .board-section.is-select .board-more {
   display: block;
+}
+.archieve-tab {
+  /* position: absolute; */
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  background: #ccc;
+  padding: 5px 15px;
+  color: #666;
 }
 
 /* 슬로건 */
