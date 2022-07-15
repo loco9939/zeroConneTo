@@ -354,20 +354,6 @@ body {
   background-size: 14px 14px, 100%;
 }
 
-.description {
-  padding: 10px;
-  margin-top: 20px;
-  border-radius: 5px;
-  background: #aaa linear-gradient(to bottom, #ccc, #aaa);
-}
-.description img {
-  display: inline;
-}
-.description p {
-  display: inline-block;
-  width: 150px;
-}
-
 /* 웹 관련 용어 */
 .term {
   background: #aaa linear-gradient(to bottom, #ccc, #aaa);
@@ -385,17 +371,17 @@ body {
 }
 .term-list div {
   display: flow-root;
+  background: orange;
   margin-top: 15px;
 }
 .term-list-thumnail {
-  /* float: left; */
+  
   width: 65px;
 }
 .term-list-thumnail img {
   vertical-align: top;
 }
 .term-list-subject{
-  /* float: right; */
   padding-bottom: 5px;
   width: 145px;
   color: #296897;
@@ -407,7 +393,6 @@ body {
   top: 3px;
 }
 .term-list-brief {
-  /* float: right; */
   width: 145px;
   padding-top: 5px;
   line-height: 1.5;
@@ -427,6 +412,36 @@ body {
   float: left;
 }
 
+/* 검색 폼 */
+.search-form {
+  background: #e2e2e2 linear-gradient(#e2e2e2,#eee);
+  width: 380px;
+  min-height: 50px;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid black;
+  border-bottom: 0;
+}
+#input-search {
+  width: 150px;
+  margin:10px
+}
+.search-button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #181818;
+  color: #eee;
+  border: 0;
+}
+.search-label::before {
+  font-family: 'fontello';
+  font-weight: normal;
+  display: inline-block;
+  width: 1em;
+  margin-right: .2em;
+  content: '\e802';
+}
 
 /* 슬로건 */
 .slogan {
