@@ -453,46 +453,40 @@ body {
   background: yellow;
   position: relative;
   margin-top: 20px;
-  display: flow-root;
+  padding-top: 45px;
+  min-height: 214px;
+}
+.board-tab {
+  position: absolute;
+  top: 0;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  background: #ccc;
+  padding: 5px 15px;
+  color: #666;
 }
 .notice-tab {
-  float: left;
-  border: 1px solid #aaa;
-  border-radius: 5px 5px 0 0;
-  background: #ccc;
-  padding: 5px 15px;
-  color: #666;
+  left: 0;
 }
-/* .board-tab {
-  float: left;
-  border: 1px solid #aaa;
-  border-radius: 5px 5px 0 0;
-  background: #ccc;
-  padding: 5px 15px;
-  color: #666;
-} */
+.archieve-tab {
+  left: 80px;
+}
+.board-section.is-select .board-tab {
+  z-index: 10;
+}
 .board-section.is-select .board-tab {
   background: #fff;
   color: #ed552f;
   border-color: currentColor currentColor #fff currentColor;
 }
 .board-panel {
-  /* position: absolute; */
-  /* background: lime; */
   display: none;
-  /* top: 45px; */
-  width: 100%;
-  float: left;
 }
 .board-section.is-select .board-panel {
-  /* display: flex;
-  flex-flow: wrap;*/
-  width: 100%; 
-  /* gap: 10px; */
-  /* float: left; */
-}
-.is-select {
-  display: block;
+  display: flex;
+  flex-flow: wrap;
+  width: 100%;
+  gap: 10px;
 }
 .board-panel li {
   display: flex;
@@ -520,14 +514,6 @@ body {
 
 .board-section.is-select .board-more {
   display: block;
-}
-.archieve-tab {
-  /* position: absolute; */
-  border: 1px solid #aaa;
-  border-radius: 5px 5px 0 0;
-  background: #ccc;
-  padding: 5px 15px;
-  color: #666;
 }
 
 /* 슬로건 */
