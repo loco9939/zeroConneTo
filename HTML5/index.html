@@ -202,11 +202,10 @@
       <h2 class="sr-only">검색</h2>
       <form method="POST" action="https://formspree.io/seulbinim@gmail.com" class="search-form">
         <fieldset>
-          <div>
-            <label for="input-search" class="search-label">자료검색</label>
-            <input type="search" name="" id="input-search" placeholder="검색어를 입력하세요" />
-            <button type="button" class="search-button">검색</button>
-          </div>
+          <legend>검색 폼</legend>
+          <label for="search" class="search-label"><i class="icon-search" aria-hidden="ture"></i> 자료검색</label>
+          <input type="search" name="search" required="required" id="search" placeholder="검색어를 입력하세요" />
+          <button type="submit" class="search-button">검색</button>
         </fieldset>
       </form>
     </div>
