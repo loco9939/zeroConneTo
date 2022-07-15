@@ -437,6 +437,7 @@ body {
   /* flex-grow: 1; */
   width: 100%;
   margin: 0 10px;
+  -webkit-appearance: none;
 }
 .search-button {
   background: #000;
