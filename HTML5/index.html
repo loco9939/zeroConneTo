@@ -13,6 +13,9 @@
 </head>
 
 <body>
+  <a href="#userEmail" class="skip-nav">
+    <span>본문 바로가기</span>
+  </a>
   <header class="header">
     <h1 class="logo">
       <a href="/"><img src="./assets/logo.png" alt="Web Cafe" /></a>
@@ -182,14 +185,14 @@
         <dl class="term-list">
           <div class="odd">
             <dt class="term-list-subject">웹 표준 이란?</dt>
-            <dd class="term-list-thumnail">
+            <dd class="term-list-thumbnail">
               <img src="./assets/web_standards.gif" alt="W3C 로고" width="100%" />
             </dd>
             <dd class="term-list-brief">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</dd>
           </div>
           <div class="even">
             <dt class="term-list-subject">웹 표준 이란?</dt>
-            <dd class="term-list-thumnail">
+            <dd class="term-list-thumbnail">
               <img src="./assets/web_standards.gif" alt="W3C 로고" width="100%" />
             </dd>
             <dd class="term-list-brief">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</dd>
@@ -208,7 +211,7 @@
           <button type="submit" class="search-button">검색</button>
         </fieldset>
       </form>
-      <!-- <div class="board">
+      <div class="board">
         <section class="notice board-section is-select">
           <h2 class="sr-only notice-title" id="noticeTitle">공지사항</h2>
           <button class="board-tab notice-tab" type="button">공지사항</button>
@@ -238,7 +241,7 @@
         </section>
         <section class="archive board-section">
           <h2 class="sr-only archive-title" id="archiveTitle">자료실</h2>
-          <button class="board-tab archieve-tab">자료실</button>
+          <button class="board-tab archive-tab">자료실</button>
           <ul class="archive-list board-panel">
             <li>
               <a class="icon-dot-circled" href="/">디자인 사이트 링크 모음</a>
@@ -263,8 +266,8 @@
           </ul>
           <a href="/" class="icon-plus more board-more" title="자료실" aria-labelledby="archiveTitle">더보기</a>
         </section>
-</div> -->
-      <div class="board">
+</div>
+      <!-- <div class="board">
         <div class="tab-list" role="tablist">
           <button class="tab" type="button" role="tab" aria-selected="true" id="buttonNotice"
             aria-controls="panelNotice">공지사항</button>
@@ -322,7 +325,7 @@
           </ul>
           <a href="/" class="icon-plus more board-more" title="자료실">더보기</a>
         </div>
-      </div>
+      </div> -->
       <section class="news">
         <h2 class="news-title">새소식</h2>
         <a href="/" class="news-link">
@@ -347,11 +350,11 @@
       <div class="gradient-effect">
         <section class="event">
           <h2 class="event-title">신규 <span class="accent-color">이벤트</span></h2>
-          <div class="event-button-wrapper">
-            <button class="event-button-prev" type="button">이전 이벤트 보기</button>
-            <button class="event-button-next" type="button">다음 이벤트 보기</button>
+          <div class="event-button-container">
+            <button type="button" class="event-button-prev" aria-label="이전 이벤트 보기"></button>
+            <button type="button" class="event-button-next" aria-label="다음 이벤트 보기"></button>
           </div>
-          <div id="eventDetail">
+          <div id="eventDetail" class="event-detail">
             <p class="event-thumbnail">
               <img src="./assets/free_gift.gif" alt="이벤트 경품 : 웹 표준 핵심 가이드북 2" />
             </p>
@@ -362,7 +365,7 @@
         </section>
         <section class="related">
           <h2 class="related-title">관련 <span class="accent-color">사이트</span></h2>
-          <ul class="related-list">
+          <ul class="related-list" tabindex="0">
             <li><a href="https://zero-base.co.kr/" target="_blank" rel="noopener noreferrer">제로베이스</a></li>
             <li><a href="/" target="_blank" rel="noopener noreferrer">W3C</a></li>
             <li><a href="/" target="_blank" rel="noopener noreferrer">데이원컴퍼니</a></li>
@@ -371,9 +374,28 @@
           </ul>
         </section>
       </div>
+      <section class="favorite gradient-effect">
+        <h2 class="favorite-title">인기 <span class="accent-color">사이트</span></h2>
+        <ol class="favorite-list">
+          <li class="no1"><a href="/">W3C</a><em class="up" aria-label="상승"></em></li>
+          <li class="no2"><a href="/">Web Standards</a><em class="down" aria-label="하락"></em></li>
+          <li class="no3"><a href="/">CSS ZenGarden</a><em class="stop" aria-label="변동없음"></em></li>
+          <li class="no4"><a href="/">MDN</a><em class="up" aria-label="상승"></em></li>
+        </ol>
+        <a href="/" class="icon-plus more favorite-more" title="인기 사이트">더보기</a>
+      </section>
     </div>
   </main>
-  <article class="slogan">슬로건</article>
+  <article class="slogan">
+    <h2 class="slogan-title" title="웹카페에서 웹표준을">슬로건</h2>
+    <p class="slogan-content">
+      <q cite="http://w3.org/WAI">The power of the Web is in its universality, Access by everyone regardless of disability is an essential aspect.</q>
+      Tim Berners - Lee , W3C Director and inventor of the World Wide Web
+    </p>
+    <footer class="sr-only">
+      출처 : W3C, http://w3.org/WAI/
+    </footer>
+  </article>
   <footer class="footer">
     <div class="footer-inner">푸터</div>
   </footer>
