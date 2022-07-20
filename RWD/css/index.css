@@ -9,89 +9,119 @@
 }
 
 /* 모든 디바이스(All Device) */
-/* 공통로고 */
+/* 공통 헤더 */
 .appHeader {
   position: relative;
-  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: var(--spacing-base) var(--spacing-md);
   background: #fff;
+  gap: var(--spacing-base);
 }
+
+/* 공통로고 */
 .logo {
   width: 12.75rem;
   height: 3.687rem;
-  /* background: yellow; */
-}
-.logo__link {
-  display: block;
-  width: 100%;
-  height: 100%;
   background: url(./../images/webcafe-logo.png) no-repeat 0 0/100%;
 }
-.memberOnly {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  flex-flow: row nowrap;
-}
+
+/* 공통 검색 폼 */
 .searchForm__group {
   display: flex;
   flex-flow: row nowrap;
-  margin-top: 20px;
-  column-gap: 10px;
-  align-items: center;
 }
-.formInput {
-  flex-grow: 1;
+.searchForm__group .formInput {
+  margin-right: var(--spacing-xs);
 }
-.formInput input {
+.searchForm__group .formInput__input {
   width: 100%;
-  padding: 5px;
-  border: 1px solid #aaa;
-  border-radius: 3px;
-}
-.button--burger {
-  display: none;
-}
-.button--fill {
-  background: var(--accent-button);
-  color: var(--white);
+  height: 2rem;
+  border: 1px solid var(--silver);
+  background: var(--white);
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.75rem;
 }
 .button {
-  padding: 5px 10px;
+  cursor: pointer;
+  height: 2rem;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.75rem;
+  white-space: nowrap;
+  font-size: var(--text-sm);
+}
+.button--none {
   border: 0;
-  border-radius: 5px;
+  padding: 0;
+  background: transparent;
+}
+
+.button--fill {
+  background: var(--secondary-color);
+  color: var(--white);
+  border: 0;
+}
+.button--outline {
+  background: transparent;
+  color: var(--secondary-color);
+  border: 1px solid currentColor;
+}
+
+/* 공통 멤버 서비스 */
+.memberOnly {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
 }
 
 /* 모바일 디바이스(Mobile Device) 320이상 */
 @media (min-width: 320px) and (max-width: 767px) {
-  .button--burger {
-    display: block;
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-  }
-  .searchForm__group {
-    width: 100%;
-  }
+  /* 모바일 헤더 */
   .appHeader {
-    background: #000;
-  }
-  .memberOnly {
+    background: var(--primary-color);
     color: var(--white);
+  }
+  /* 모바일 멤버 서비스 */
+  .memberOnly {
+    order: -1;
+    font-size: var(--text-sm);
+  }
+  /* 모바일 검색 폼 */
+  .searchForm__group .formInput {
+    flex-grow: 1;
+  }
+  /* 모바일 메인 메뉴 제어버튼 */
+  .button--burger {
+    position: absolute;
+    top: 3.75rem;
+    right: var(--spacing-md);
   }
 }
 
 /* 데스크탑 디바이스 (Desktop Device) */
 @media (min-width: 768px) {
-  .searchForm__group {
-    width: 450px;
-    margin: -20px 0 0 auto;
-  }
+  /* 데스크탑 헤더 */
   .appHeader {
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* 데스크탑 로고 */
+  .logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  /* 데스크탑 검색 폼 */
+  .searchForm__group {
+    justify-content: flex-end;
+  }
+  .searchForm__group .formInput {
+    width: 25rem;
+  }
+  /* 데스크탑 메인메뉴 제어버튼 */
+  .button--burger {
+    display: none;
   }
 }
 
