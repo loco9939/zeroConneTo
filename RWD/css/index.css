@@ -84,7 +84,6 @@ input[type="search"] {
   padding: var(--spacing-xs);
   font-size: var(--text-md);
   font-weight: 700;
-  color: var(--white);
 }
 
 /* 모바일 디바이스(Mobile Device) 320이상 */
@@ -116,7 +115,7 @@ input[type="search"] {
     position: relative;
     width: 2rem;
     height: 2rem;
-    background: darkblue;
+
   }
   .button--burger:focus {
     outline-offset: 2px;
@@ -173,12 +172,6 @@ input[type="search"] {
   .menu__item {
     border-bottom: 1px solid var(--silver);
   }
-  .menu__link {
-    display: block;
-    padding: var(--spacing-xs);
-    font-size: var(--text-md);
-    font-weight: 700;
-  }
   .menu.is--active {
     transform: none;
   }
@@ -225,7 +218,8 @@ input[type="search"] {
     padding: var(--spacing-md);
   }
   .menu__link {
-    text-shadow: 1px 1px 0 var(-black), -1px -1px - var(-black);
+    color: var(--white);
+    text-shadow: 1px 1px 0 var(-black), -1px -1px 0 var(-black);
   }
 }
 
