@@ -92,41 +92,51 @@ input[type="search"] {
 }
 
 /* 공통 메인 컨텐츠 섹션 제목 */
-/* .book__title {
-  
-} */
-.book {
-  width: 20.75rem;
-  padding: 20px;
+.appMain [class*="__title"] {
+  margin-bottom: var(--spacing-base);
+  font-weight: 700;
+  font-size: var(--text-md);
 }
-.book__enTitle {
-  display: block;
-  white-space: nowrap;
+.appMain [class*="__enTitle"] {
+  font-weight: 400;
+  font-size: var(--text-base);
 }
 .sprite {
-  width: 58px;
-  height: 59px;
-  background: url(./../images/sprite_main.png) no-repeat 0 0/100%;
+  min-height: 3.75rem;
+  padding-left: 4rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-image: url(./../images/sprite_main.png);
+  background-repeat: no-repeat;
+  background-color: pink;
 }
-.book__cover {
-  margin: 20px;
+.spriteNews {
+  background-position: 0 -230px;
 }
-.book__coverCaption {
-  text-align: center;
-  margin: 10px 0;
+.spriteBoard {
+  background-position: 0 -115px;
 }
-.book__info {
-  text-align: center;
+.spriteFavorite {
+  background-position: 0 -345px;
 }
-.book__info dt {
-  display: inline;
+.spriteTwitter {
+  background-position: 0 -460px;
 }
-.book__info dd {
-  margin: 10px 0;
-  /* display: inline; */
+.accentBook {
+  color: var(--accent-book);
 }
-.ratingStar {
-  display: block;
+.accentNews {
+  color: var(--accent-news);
+}
+.accentBoard {
+  color: var(--accent-board);
+}
+.accentFavorite {
+  color: var(--accent-favorite);
+}
+.accentTwitter {
+  color: var(--accent-twitter);
 }
 
 /* 모바일 디바이스(Mobile Device) 320이상 */
