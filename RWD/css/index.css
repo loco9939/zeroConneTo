@@ -78,6 +78,14 @@ input[type="search"] {
   flex-flow: row nowrap;
   justify-content: flex-end;
 }
+/* 공통 네비게이션 */
+.menu__list {
+  display: flex;
+  background: pink;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 20px 80px;
+}
 
 /* 모바일 디바이스(Mobile Device) 320이상 */
 @media (min-width: 320px) and (max-width: 767px) {
@@ -102,7 +110,7 @@ input[type="search"] {
     right: var(--spacing-md);
     padding: 0.25rem;
     overflow: hidden;
-    transform: translate(0.25rem,-0.25rem);
+    transform: translate(0.25rem, -0.25rem);
   }
   .button--burger {
     position: relative;
@@ -142,11 +150,19 @@ input[type="search"] {
   }
   .button--burger.is--active .button--burgerBarTop {
     top: 50%;
-    transform:translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
   }
   .button--burger.is--active .button--burgerBarBottom {
     top: 50%;
-    transform:translateY(-50%) rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  /* 모바일 네비게이션 */
+
+  .menu__item {
+    width: 100%;
+    margin: 10px 0;
+    display: inline-block;
   }
 }
 
