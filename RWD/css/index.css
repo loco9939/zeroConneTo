@@ -214,13 +214,13 @@ input[type="search"] {
     flex-grow: 1;
   }
   /* 모바일 메인 메뉴 제어버튼 */
-  .buttonWrapper {
+
+  /* .buttonWrapper {
     position: absolute;
     top: 3.75rem;
     right: var(--spacing-lg);
     padding: 0.25rem;
     overflow: hidden;
-    transform: translate(0.25rem, -0.25rem);
   }
   .button--burger {
     position: relative;
@@ -255,7 +255,6 @@ input[type="search"] {
   }
   .button--burger.is--active .button--burgerBarMiddle {
     transform: translate(-150%, -50%);
-    /* display: none; */
   }
   .button--burger.is--active .button--burgerBarTop {
     top: 50%;
@@ -264,6 +263,31 @@ input[type="search"] {
   .button--burger.is--active .button--burgerBarBottom {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
+  } */
+
+  /* flex로 만들어 보기 */
+  .buttonWrapper {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 3.75rem;
+    right: 1.25rem;
+    padding: 0;
+  }
+  .button--burger {
+    background: green;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+  }
+  .button--burger .button--burgerBarTop,
+  .button--burger .button--burgerBarMiddle,
+  .button--burger .button--burgerBarBottom {
+    width: 32px;
+    height: 20%;
+    background: yellow;
   }
 
   /* 모바일 메인 메뉴 */
