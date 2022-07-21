@@ -96,34 +96,57 @@ input[type="search"] {
     flex-grow: 1;
   }
   /* 모바일 메인 메뉴 제어버튼 */
-  .button--burger {
+  .buttonWrapper {
     position: absolute;
     top: 3.75rem;
     right: var(--spacing-md);
-    width: 50px;
-    height: 50px;
-    transition: all 0.5s;
+    padding: 0.25rem;
+    overflow: hidden;
+    transform: translate(0.25rem,-0.25rem);
   }
-  .button--burger span {
-    background: var(--white);
-    border-radius: 5px;
-    display: block;
-    height: 0.45rem;
+  .button--burger {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background: darkblue;
+  }
+  .button--burger:focus {
+    outline-offset: 2px;
+  }
+
+  .button--burgerBarTop,
+  .button--burgerBarMiddle,
+  .button--burgerBarBottom {
     width: 100%;
+    position: absolute;
+    height: 20%;
+    background: var(--white);
+    border-radius: 0.25rem;
+    left: 0;
+    transition: all 200ms;
+  }
+  .button--burgerBarTop {
+    top: 0;
   }
   .button--burgerBarMiddle {
-    margin: 10px 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .button--burgerBarBottom {
+    top: 100%;
+    transform: translateY(-100%);
   }
   .button--burger.is--active .button--burgerBarMiddle {
-    display: none;
+    transform: translate(-150%, -50%);
+    /* display: none; */
   }
   .button--burger.is--active .button--burgerBarTop {
-    transform: rotate(-45deg);
-    position: absolute;
+    top: 50%;
+    transform:translateY(-50%) rotate(45deg);
   }
   .button--burger.is--active .button--burgerBarBottom {
-    position: absolute;
-    transform: rotate(45deg);
+    top: 50%;
+    transform:translateY(-50%) rotate(-45deg);
   }
 }
 
