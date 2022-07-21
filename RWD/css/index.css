@@ -14,7 +14,7 @@
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  padding: var(--spacing-base) var(--spacing-md);
+  padding: var(--spacing-base) var(--spacing-lg);
   background: #fff;
   gap: var(--spacing-base);
 }
@@ -86,6 +86,49 @@ input[type="search"] {
   font-weight: 700;
 }
 
+/* 공통 메인 컨텐츠 */
+.appMain {
+  padding: var(--spacing-base) var(--spacing-lg);
+}
+
+/* 공통 메인 컨텐츠 섹션 제목 */
+/* .book__title {
+  
+} */
+.book {
+  width: 20.75rem;
+  padding: 20px;
+}
+.book__enTitle {
+  display: block;
+  white-space: nowrap;
+}
+.sprite {
+  width: 58px;
+  height: 59px;
+  background: url(./../images/sprite_main.png) no-repeat 0 0/100%;
+}
+.book__cover {
+  margin: 20px;
+}
+.book__coverCaption {
+  text-align: center;
+  margin: 10px 0;
+}
+.book__info {
+  text-align: center;
+}
+.book__info dt {
+  display: inline;
+}
+.book__info dd {
+  margin: 10px 0;
+  /* display: inline; */
+}
+.ratingStar {
+  display: block;
+}
+
 /* 모바일 디바이스(Mobile Device) 320이상 */
 @media (min-width: 320px) and (max-width: 767px) {
   /* 모바일 헤더 */
@@ -106,7 +149,7 @@ input[type="search"] {
   .buttonWrapper {
     position: absolute;
     top: 3.75rem;
-    right: var(--spacing-md);
+    right: var(--spacing-lg);
     padding: 0.25rem;
     overflow: hidden;
     transform: translate(0.25rem, -0.25rem);
@@ -115,7 +158,6 @@ input[type="search"] {
     position: relative;
     width: 2rem;
     height: 2rem;
-
   }
   .button--burger:focus {
     outline-offset: 2px;
@@ -165,7 +207,7 @@ input[type="search"] {
     width: 70vw;
     height: 100vh;
     backdrop-filter: blur(4px);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     transform: translateX(-150%);
     transition: all 300ms;
   }
@@ -205,7 +247,7 @@ input[type="search"] {
   /* 데스크탑 메인 메뉴 */
   .menu {
     background: var(--secondary-color);
-    padding: var(--spacing-base) var(--spacing-md);
+    padding: var(--spacing-base) var(--spacing-lg);
   }
   .menu__list {
     max-width: var(--container-width);
@@ -220,6 +262,13 @@ input[type="search"] {
   .menu__link {
     color: var(--white);
     text-shadow: 1px 1px 0 var(-black), -1px -1px 0 var(-black);
+  }
+
+  /* 데스크탑 메인 컨텐츠 */
+  .appMain {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
