@@ -231,14 +231,22 @@ input[type="search"] {
 }
 
 /* 공통 트위터 */
-.twitter__userInfo .twitter__userId,
-.twitter__userName {
-  display: inline-block;
+.twitter__userInfo {
+  display: inline-flex;
+  gap: var(--spacing-xs);
 }
-.twitter__container .twitter__userProfile {
+.twitter__userProfile {
   float: right;
-  /* clip-path: circle(50%); */
   shape-outside: circle(50%);
+  width: 20%;
+  max-width: 110px;
+  max-height: 110px;
+  object-fit: contain;
+}
+.twitter__userProfileImage {
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  vertical-align: top;
 }
 .twitter__summary {
   margin-bottom: 0.5rem;
@@ -416,6 +424,11 @@ input[type="search"] {
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
+  }
+  /* 데스크탑 트위터 */
+  .twitter__userProfile {
+    width: 100px;
+    height: 100px;
   }
 }
 
