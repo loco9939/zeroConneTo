@@ -109,7 +109,7 @@ input[type="search"] {
   justify-content: center;
   background-image: url(./../images/sprite_main.png);
   background-repeat: no-repeat;
-  background-color: pink;
+  /* background-color: pink; */
 }
 .spriteNews {
   background-position: 0 -230px;
@@ -195,6 +195,46 @@ input[type="search"] {
 }
 .iframRatio-16 {
   padding-top: 56.25%;
+}
+
+/* 공통 게시판 */
+.board {
+  position: relative;
+}
+.board__more {
+  position: absolute;
+  top: 1.2rem;
+  right: 0.25rem;
+}
+.sprite {
+  margin-top: 2rem;
+}
+.board__list li {
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+.board__list li a {
+  overflow: hidden;
+  width: 100%;
+  
+  text-overflow: ellipsis;
+}
+.board__list li a, .board__list li time {
+  white-space: nowrap;
+  display: block;
+}
+
+/* 공통 인기사이트 */
+.favorite {
+  position: relative;
+}
+.favorite__list li {
+  padding: 0.3rem;
+}
+.favorite__list li a {
+  display: block;
 }
 
 /* 모바일 디바이스(Mobile Device) 320이상 */
