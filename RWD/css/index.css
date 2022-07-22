@@ -215,7 +215,7 @@ input[type="search"] {
   }
   /* 모바일 메인 메뉴 제어버튼 */
 
-  /* .buttonWrapper {
+  .buttonWrapper {
     position: absolute;
     top: 3.75rem;
     right: var(--spacing-lg);
@@ -263,10 +263,10 @@ input[type="search"] {
   .button--burger.is--active .button--burgerBarBottom {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
-  } */
+  }
 
   /* flex로 만들어 보기 */
-  .buttonWrapper {
+  /* .buttonWrapper {
     width: 32px;
     height: 32px;
     position: absolute;
@@ -288,7 +288,7 @@ input[type="search"] {
     width: 32px;
     height: 20%;
     background: yellow;
-  }
+  } */
 
   /* 모바일 메인 메뉴 */
   .menu {
