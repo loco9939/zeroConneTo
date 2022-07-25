@@ -397,7 +397,6 @@ body {
 }
 .term-list div {
   display: flow-root;
-  background: orange;
   margin-top: 15px;
 }
 .term-list-thumbnail {
