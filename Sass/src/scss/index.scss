@@ -1,1 +1,12 @@
 // index.scss
+@use "./base";
+@use "./utils" as *; // 별칭없이 사용할 수 있다. 네임 스페이스 안쓰고 싶으면 이렇게 사용
+
+.box {
+  @include mobile {
+    background: yellow;
+  }
+  @include mobile {
+    background: yellow;
+  }
+}
