@@ -27,11 +27,15 @@
 }
 
 // 믹스인 pos
-@mixin pos($pos:absolute, $t:initial, $l:initial, $r:initial) {
+@mixin posLeft($t, $l, $pos: absolute) {
   position: $pos;
-  top: $t;
-  left: $l;
-  right: $r;
+  top: rem($t);
+  left: rem($l);
+}
+@mixin posRight($t, $r, $pos: absolute) {
+  position: $pos;
+  top: rem($t);
+  right: rem($r);
 }
 
 // 포지션 관련 mixin
@@ -57,6 +61,12 @@
 @mixin boxSizeMax($max: $container-width) {
   max-width: $max;
   @include autoMargin;
+}
+
+// transform 관련 믹스인
+@mixin transRotate($tx:-50%, $ty:-50%, $rotate: 0) {
+  top: 50%;
+  transform: translate($tx, $ty) rotate(#{$rotate} + 'deg');
 }
 
 // 말줄임표 mixin

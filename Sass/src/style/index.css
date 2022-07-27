@@ -420,9 +420,54 @@ legend {
   height: 2rem;
   font-size: 0.875rem;
 }
+.button--none {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
 .button--fill {
   background: #988574;
   color: #fff;
+}
+
+.buttonWrapper {
+  overflow: hidden;
+}
+
+.button--burger {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.button--burgerBarTop, .button--burgerBarMiddle, .button--burgerBarBottom {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 20%;
+  background: #fff;
+  border-radius: 0.5rem;
+  transition: all 350ms;
+}
+.button--burgerBarMiddle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.button--burgerBarBottom {
+  top: 100%;
+  transform: translateY(-100%);
+}
+.is--active .button--burgerBarTop {
+  top: 50%;
+  transform: translate(0%, -50%) rotate(45deg);
+}
+.is--active .button--burgerBarMiddle {
+  top: 50%;
+  transform: translate(-120%, -50%) rotate(0deg);
+}
+.is--active .button--burgerBarBottom {
+  top: 50%;
+  transform: translate(0%, -50%) rotate(-45deg);
 }
 
 .appHeader {
@@ -435,14 +480,11 @@ legend {
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: nowrap;
+  position: relative;
 }
 @media (max-width: 767px) {
   .appHeader {
     background: #38302e;
-    position: relative;
-    top: initial;
-    left: initial;
-    right: initial;
   }
 }
 @media (min-width: 768px) {
@@ -458,36 +500,8 @@ legend {
 @media (max-width: 767px) {
   .appHeader .buttonWrapper {
     position: absolute;
-    top: 3rem;
-    left: initial;
+    top: 3.375rem;
     right: 1.5rem;
-  }
-}
-@media (min-width: 768px) {
-  .appHeader .buttonWrapper {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .appHeader .button--burger {
-    padding-left: 0rem;
-    padding-right: 0rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    width: 2.25rem;
-    height: 2.25rem;
-    background: transparent;
-    border: 0;
-  }
-  .appHeader .button--burgerBarTop, .appHeader .button--burgerBarMiddle, .appHeader .button--burgerBarBottom {
-    width: 100%;
-    height: 0.3125rem;
-    border: 0;
-    background: #fff;
-    border-radius: 5px;
   }
 }
 
