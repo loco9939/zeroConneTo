@@ -434,40 +434,42 @@ legend {
   overflow: hidden;
 }
 
-.button--burger {
-  width: 2rem;
-  height: 2rem;
-  position: relative;
-}
-.button--burgerBarTop, .button--burgerBarMiddle, .button--burgerBarBottom {
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
-  width: 100%;
-  height: 20%;
-  background: #fff;
-  border-radius: 0.5rem;
-  transition: all 350ms;
-}
-.button--burgerBarMiddle {
-  top: 50%;
-  transform: translateY(-50%);
-}
-.button--burgerBarBottom {
-  top: 100%;
-  transform: translateY(-100%);
-}
-.is--active .button--burgerBarTop {
-  top: 50%;
-  transform: translate(0%, -50%) rotate(45deg);
-}
-.is--active .button--burgerBarMiddle {
-  top: 50%;
-  transform: translate(-120%, -50%) rotate(0deg);
-}
-.is--active .button--burgerBarBottom {
-  top: 50%;
-  transform: translate(0%, -50%) rotate(-45deg);
+@media (max-width: 767px) {
+  .button--burger {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+  }
+  .button--burgerBarTop, .button--burgerBarMiddle, .button--burgerBarBottom {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: 20%;
+    background: #fff;
+    border-radius: 0.5rem;
+    transition: all 350ms;
+  }
+  .button--burgerBarMiddle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .button--burgerBarBottom {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  .is--active .button--burgerBarTop {
+    top: 50%;
+    transform: translate(0%, -50%) rotate(45deg);
+  }
+  .is--active .button--burgerBarMiddle {
+    top: 50%;
+    transform: translate(-120%, -50%) rotate(0deg);
+  }
+  .is--active .button--burgerBarBottom {
+    top: 50%;
+    transform: translate(0%, -50%) rotate(-45deg);
+  }
 }
 
 .appHeader {
@@ -615,6 +617,39 @@ legend {
   display: block;
   font-size: 1.125rem;
   font-weight: 700;
+}
+
+.home {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 768px) {
+  .home {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 25rem;
+    grid-template-areas: "news news news news news news news news news news news news" "news news news news news news news news news news news news" "book book book book favorite favorite favorite . twitter twitter twitter twitter" "book book book book . board board board board board board board";
+  }
+  .home .news {
+    grid-area: news;
+  }
+  .home .book {
+    grid-area: book;
+  }
+  .home .favorite {
+    grid-area: favorite;
+  }
+  .home .twitter {
+    grid-area: twitter;
+  }
+  .home .board {
+    grid-area: board;
+  }
+}
+@media (max-width: 767px) {
+  .home {
+    text-align: center;
+  }
 }
 
 .box {

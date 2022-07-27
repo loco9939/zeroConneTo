@@ -1,1 +1,25 @@
-// home.scss
+@use "./../utils" as *;
+.home {
+  @include paddingX(24px);
+  @include desktop {
+    @include grid;
+    .news {
+      grid-area: news;
+    }
+    .book {
+      grid-area: book;
+    }
+    .favorite {
+      grid-area:favorite;
+    }
+    .twitter {
+      grid-area: twitter;
+    }
+    .board{
+      grid-area: board;
+    }
+  }
+  @include mobile {
+    text-align: center;
+  }
+}

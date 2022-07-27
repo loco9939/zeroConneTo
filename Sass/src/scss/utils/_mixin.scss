@@ -64,9 +64,9 @@
 }
 
 // transform 관련 믹스인
-@mixin transRotate($tx:-50%, $ty:-50%, $rotate: 0) {
+@mixin transRotate($tx: -50%, $ty: -50%, $rotate: 0) {
   top: 50%;
-  transform: translate($tx, $ty) rotate(#{$rotate} + 'deg');
+  transform: translate($tx, $ty) rotate(#{$rotate} + "deg");
 }
 
 // 말줄임표 mixin
@@ -118,4 +118,15 @@
   font-size: rem($size);
   letter-spacing: -0.02em;
   // line-height: 1.5;
+}
+
+// 그리드 mixin
+@mixin grid($c: 1fr) {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: rem(400px);
+  grid-template-areas: "news news news news news news news news news news news news"
+  "news news news news news news news news news news news news"
+  "book book book book favorite favorite favorite . twitter twitter twitter twitter"
+  "book book book book . board board board board board board board";
 }
