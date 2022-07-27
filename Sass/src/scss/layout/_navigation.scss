@@ -1,34 +1,37 @@
 @use "./../utils" as *;
-@use "./../components" as *;
 
 .menu {
   background: pink;
-  width: rem(360px);
-  height: 100vh;
 
-  @include posLeft(0, 0);
-
+  &.is--active {
+    transform: none;
+  }
+  @include mobile {
+    @include posLeft(0, 0, fixed);
+    width: 70%;
+    height: 100vh;
+    background: rgba($green, 0.85);
+    backdrop-filter: blur(4px);
+    transform: translateX(-120%);
+  }
+  @include desktop {
+    background: $secondary-color;
+  }
   &__list {
-    @include mobile {
-      @include flexbox($d: column);
-      @include paddingX(24px);
-      @include paddingY(24px);
-    }
-
+    padding: rem(16px) rem(24px);
     @include desktop {
+      @include boxSizeMax;
       @include flexbox($j: space-between);
-      @include paddingX(130px);
-      @include paddingY(36px);
-      color: $white;
     }
   }
-  .is--active &__list {
-    @include mobile {
 
-    }
+  &__item {
+    @include marginY(16px);
   }
-}
-.menu__item {
-  @include paddingY(8px);
-  border-bottom: 1px solid $black;
+
+  &__link {
+    display: block;
+    font-size: rem(18px);
+    font-weight: 700;
+  }
 }
