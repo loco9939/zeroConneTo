@@ -27,10 +27,11 @@
 }
 
 // 믹스인 pos
-@mixin pos($pos:absolute, $t:initial, $l:initial) {
+@mixin pos($pos:absolute, $t:initial, $l:initial, $r:initial) {
   position: $pos;
   top: $t;
   left: $l;
+  right: $r;
 }
 
 // 포지션 관련 mixin

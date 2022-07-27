@@ -1,5 +1,5 @@
 @use "./../utils" as *;
-@use './../components' as *;
+@use "./../components" as *;
 
 // 헤더
 .appHeader {
@@ -9,6 +9,7 @@
 
   @include mobile {
     background: $primary-color;
+    @include pos($pos: relative);
   }
 
   @include desktop {
@@ -17,6 +18,39 @@
     @include boxSizeMax;
     background: yellow;
   }
+  // 햄버거 버튼
+  .buttonWrapper {
+    @include mobile {
+      // 위치지정
+      @include pos($t: rem(48px), $r: rem(24px));
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .button--burger {
+    @include mobile {
+      @include paddingX(rem(0));
+      @include flexbox($d: column, $j: space-between);
+      width: rem(36px);
+      height: rem(36px);
+      background: transparent;
+      border: 0;
+      &BarTop,
+      &BarMiddle,
+      &BarBottom {
+        width: 100%;
+        height: rem(5px);
+        border: 0;
+        background: $white;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  // 메인메뉴
+  
 }
 
 // 로고
@@ -63,7 +97,7 @@
       width: 100%;
     }
   }
-  .button--primary{
-    margin-left:rem(16px);
+  .button--primary {
+    margin-left: rem(16px);
   }
 }
