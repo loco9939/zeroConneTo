@@ -1,1 +1,34 @@
-// navigation.scss
+@use "./../utils" as *;
+@use "./../components" as *;
+
+.menu {
+  background: pink;
+  width: rem(360px);
+  height: 100vh;
+
+  @include posLeft(0, 0);
+
+  &__list {
+    @include mobile {
+      @include flexbox($d: column);
+      @include paddingX(24px);
+      @include paddingY(24px);
+    }
+
+    @include desktop {
+      @include flexbox($j: space-between);
+      @include paddingX(130px);
+      @include paddingY(36px);
+      color: $white;
+    }
+  }
+  .is--active &__list {
+    @include mobile {
+
+    }
+  }
+}
+.menu__item {
+  @include paddingY(8px);
+  border-bottom: 1px solid $black;
+}
