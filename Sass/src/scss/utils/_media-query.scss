@@ -34,6 +34,25 @@ $breakpoints: (
     @error errorMessage($breakpoint);
   }
 }
+@mixin respond-from-until($breakpoint-from, $breakpoint-until) {
+  @if map.has-key($breakpoints, $breakpoint-from) and
+    map.has-key($breakpoints, $breakpoint-until)
+  {
+    $breakpoint-from-value: map.get($breakpoints, $breakpoint-from);
+    $breakpoint-until-value: map.get($breakpoints, $breakpoint-until);
+
+    @media (min-width: $breakpoint-from-value) and (max-width: ($breakpoint-until-value - 1)) {
+      @content;
+    }
+  } @else {
+    @if (map.has-key($breakpoints, $breakpoint-from) == false) {
+      @error errorMessage($breakpoint-from);
+    }
+    @if (map.has-key($breakpoints, $breakpoint-until) == false) {
+      @error errorMessage($breakpoint-until);
+    }
+  }
+}
 
 $break: 768px;
 
@@ -49,18 +68,18 @@ $break: 768px;
   }
 }
 
-@mixin media($meida) {
-  @if $meida == "mobile" {
+@mixin media($media) {
+  @if $media == "mobile" {
     @media (max-width: ($break - 1)) {
       @content;
     }
   }
-  @if $meida == "desktop" {
+  @if $media == "desktop" {
     @media (min-width: $break) {
       @content;
     }
   }
-  @if $meida != "mobile" and $meida != "desktop" {
+  @if $media != "mobile" and $media != "desktop" {
     @error "미디어 유형이 유효하지 않습니다";
   }
 }

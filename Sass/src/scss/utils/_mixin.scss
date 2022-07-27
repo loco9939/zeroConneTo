@@ -26,6 +26,13 @@
   padding-bottom: rem($paddingY);
 }
 
+// 믹스인 pos
+@mixin pos($pos:absolute, $t:initial, $l:initial) {
+  position: $pos;
+  top: $t;
+  left: $l;
+}
+
 // 포지션 관련 mixin
 @mixin posCenterX($pos: absolute) {
   position: $pos;
