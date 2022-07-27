@@ -1,25 +1,100 @@
 @use "./../utils" as *;
+[class*="__title"] {
+  @include flexbox(column, center, flex-start);
+  @include textHeading(18px);
+}
+[class*="__summary"] {
+  @include textStyle(14px);
+}
 .home {
-  @include paddingX(24px);
+  padding: rem(16px) rem(24px);
+  [class*="__title"] {
+    margin-bottom: rem(16px);
+  }
+  @include mobile {
+    @include flexbox(column);
+    gap: rem(16px);
+  }
   @include desktop {
-    @include grid;
-    .news {
-      grid-area: news;
-    }
+    @include gridBox;
+    @include boxSizeMax;
+    grid-template-areas:
+      "news news news news news news news news news news news news"
+      "news news news news news news news news news news news news"
+      "book book book book favorite favorite favorite . twitter twitter twitter twitter"
+      "book book book book . board board board board board board board";
+
     .book {
       grid-area: book;
     }
+    .news {
+      grid-area: news;
+    }
     .favorite {
-      grid-area:favorite;
+      grid-area: favorite;
     }
     .twitter {
       grid-area: twitter;
     }
-    .board{
+    .board {
       grid-area: board;
     }
   }
-  @include mobile {
+}
+// .home > section, .home > article{
+//   @include flexbox(column);
+//   gap:rem(16px);
+// }
+.book {
+  &__cover {
+    // @include boxCenter(70%);
     text-align: center;
   }
+  &__coverCaption {
+    margin-top: rem(16px);
+  }
+  &__info {
+    @include marginY(16px);
+    dt:first-child {
+      margin-right: rem(8px);
+    }
+    @include flexbox($j: center, $w: wrap);
+  }
+  .ratingStar {
+    width: 100%;
+    text-align: center;
+    font-size: rem(32px);
+  }
+}
+.board {
+  position: relative;
+  &__more {
+    @include posRight(0, 0);
+  }
+}
+.favorite {
+  &__link::after {
+    content: attr(data-tooltip);
+    color: $accent-favorite;
+    font-size: rem(12px);
+  }
+}
+.twitter {
+  &__userProfile {
+    float: right;
+    width: 20%;
+    max-width: 110px;
+    height: 110px;
+    shape-outside: circle(50%);
+  }
+  &__userProfileImage {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 40%;
+  }
+}
+.iframeWrapper {
+  @include responseIframe;
 }
