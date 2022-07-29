@@ -1,19 +1,9 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.button {
+  padding: 10px;
 }
 
-.box {
-  width: 200px;
-  margin-left: 200px;
-  background: #e96900 url("/assets/images/bg.jpg");
-}
-
-.box a {
-  font-size: 20px;
-  text-decoration: none;
-  color: teal;
+.card {
+  margin: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */

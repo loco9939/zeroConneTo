@@ -1,13 +1,2 @@
-@use "./utils" as *;
-
-.box {
-  width: $w;
-  margin-left: $w;
-  background: $color-primary url($url-images + "bg.jpg");
-}
-
-.box a {
-  font-size: 20px;
-  text-decoration: none;
-  color: teal;
-}
+@use './component/button';
+@use './component/card';

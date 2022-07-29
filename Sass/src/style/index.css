@@ -496,7 +496,6 @@ legend {
     max-width: 64rem;
     margin-left: auto;
     margin-right: auto;
-    background: yellow;
   }
 }
 @media (max-width: 767px) {
@@ -775,7 +774,10 @@ legend {
 }
 
 .box {
-  font-size: 1.5rem;
+  width: 300px;
+  height: 300px;
+  background: yellow;
+  border: 1px solid black;
 }
 
 /*# sourceMappingURL=index.css.map */
